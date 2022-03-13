@@ -66,7 +66,6 @@ public class Modele implements Serializable {
     public Transmission_Type transmission;
 
     @ApiModelProperty(notes = " marque de la modele")
-    @JsonIgnore
     @ManyToOne
     private Marque marque;
 

@@ -32,7 +32,7 @@ public class Marque implements Serializable {
 
     public String imageUrl;
     @ApiModelProperty(notes = "List du modele  de la marque")
-
+    @JsonIgnore
     @OneToMany(mappedBy="marque",
             cascade = CascadeType.ALL,
             fetch= FetchType.EAGER)

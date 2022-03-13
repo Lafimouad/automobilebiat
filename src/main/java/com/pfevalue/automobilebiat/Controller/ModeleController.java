@@ -47,6 +47,14 @@ public class ModeleController {
 
     }
 
+    // find Modele marque id
+    @ApiOperation(value = "Get Modeles By marque id")
+    @GetMapping("modele/marque/{id}")
+    ResponseEntity<?> getModeleByMarque(@PathVariable Long id) throws Exception {
+        return new ResponseEntity<>(modeleInterface.findModeleByMarque(id), HttpStatus.OK);
+
+    }
+
     // Delete A Modele
     @ApiOperation(value = "Delete Modele")
     @DeleteMapping("modele/{id}")

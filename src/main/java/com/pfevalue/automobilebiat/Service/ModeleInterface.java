@@ -12,4 +12,5 @@ public interface ModeleInterface {
     void deleteModele(Long id);
     Modele updateModele(Modele modele);
     Optional<Modele> FindModele(Long id);
+    List<Modele> findModeleByMarque(Long id) throws Exception;
 }
