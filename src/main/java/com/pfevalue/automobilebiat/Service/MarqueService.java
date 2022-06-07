@@ -37,4 +37,9 @@ public class MarqueService implements MarqueInterface {
     public Optional<Marque> FindMarque(Long id) {
         return marqueRepository.findById(id);
     }
+
+    @Override
+    public List<Marque> findMarqueByName(String nom) {
+        return marqueRepository.findMarqueByNom(nom);
+    }
 }

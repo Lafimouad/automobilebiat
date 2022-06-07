@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -61,6 +63,8 @@ public class Modele implements Serializable {
     @ApiModelProperty(notes = "nombre de rapports  de la modele")
     public int nbreDeRapports;
 
+    @ApiModelProperty(notes = "nombre de voiture disponible  de la modele")
+    public int numberCar;
     @ApiModelProperty(notes = " Type de transmission de la modele")
     @Enumerated(EnumType.STRING)
     public Transmission_Type transmission;

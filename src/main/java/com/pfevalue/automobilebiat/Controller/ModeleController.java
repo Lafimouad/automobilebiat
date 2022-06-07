@@ -74,4 +74,12 @@ public class ModeleController {
     }
 
 
+    @GetMapping("/getcarnumber")
+    @ResponseStatus(HttpStatus.OK)
+    @ApiOperation(value = "get Car number")
+    ResponseEntity<?> getCarNumber() {
+
+        return new ResponseEntity<>(modeleInterface.sommeNumberCar(), HttpStatus.OK);
+    }
+
 }

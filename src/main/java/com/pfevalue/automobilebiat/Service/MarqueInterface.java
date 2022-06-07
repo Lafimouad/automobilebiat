@@ -12,4 +12,6 @@ public interface MarqueInterface {
     void deleteMarque(Long id);
     Marque updateMarque(Marque marque);
     Optional<Marque> FindMarque(Long id);
+    List<Marque> findMarqueByName(String nom);
+
 }

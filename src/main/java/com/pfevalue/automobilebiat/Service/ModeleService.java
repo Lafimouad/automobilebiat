@@ -6,6 +6,7 @@ import com.pfevalue.automobilebiat.Repository.MarqueRepository;
 import com.pfevalue.automobilebiat.Repository.ModeleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -51,5 +52,10 @@ public class ModeleService implements  ModeleInterface{
         Marque marque=optionalMarque.get();
         return modeleRepository.findByMarque(marque);
 
+    }
+
+    @Override
+    public int sommeNumberCar() {
+        return modeleRepository.sommeNumberCar();
     }
 }

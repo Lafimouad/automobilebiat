@@ -34,8 +34,8 @@ public class Marque implements Serializable {
     @ApiModelProperty(notes = "List du modele  de la marque")
     @JsonIgnore
     @OneToMany(mappedBy="marque",
-            cascade = CascadeType.ALL,
-            fetch= FetchType.EAGER)
+            cascade = CascadeType.REMOVE,
+            fetch= FetchType.EAGER,orphanRemoval = true)
     private List<Modele> modeleList = new ArrayList<>();
 
 
